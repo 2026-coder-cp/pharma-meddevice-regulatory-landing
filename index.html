@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071426">
+<meta name="description" content="Engineering insights across pharmaceutical packaging, medical devices, and regulatory science.">
+<title>Life Sciences Engineering | Research & Innovation</title>
+<style>
+:root{color-scheme:dark;--bg:#071426;--fg:#f2f6fb;--muted:#b5c7d8;--accent:#47dfcf;--line:rgba(175,217,237,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5}
+a{color:inherit}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.hero{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;background:radial-gradient(ellipse at 77% 28%,#17415c 0%,transparent 48%),linear-gradient(125deg,#061426,#0b2539 80%)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(107,198,205,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(107,198,205,.055) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(90deg,transparent 6%,#000 90%)}
+.halo{position:absolute;z-index:-1;inset:-30% -20% auto auto;width:85vw;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(67,196,208,.12),transparent 63%);pointer-events:none}
+header{width:min(1160px,calc(100% - 44px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:29px 0;gap:20px}
+.brand{font-size:.88rem;font-weight:800;letter-spacing:.17em;text-decoration:none}.brand span{color:var(--accent)}
+nav{display:flex;align-items:center;gap:25px}nav a{text-decoration:none;font-size:.83rem;color:#c7dae7}nav a:hover{color:var(--accent)}
+main{width:min(1160px,calc(100% - 44px));margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:70px 0 120px}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;color:var(--accent);font-weight:750;font-size:.73rem;display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:34px;height:2px;background:var(--accent)}
+h1{font-size:clamp(2.7rem,5.5vw,5.8rem);line-height:1.07;letter-spacing:-.055em;max-width:780px;margin:25px 0}h1 em{font-style:normal;color:var(--accent)}
+.intro{font-size:clamp(1rem,1.4vw,1.2rem);color:var(--muted);max-width:620px;line-height:1.75}
+.buttons{display:flex;flex-wrap:wrap;gap:14px;margin:36px 0}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:8px;padding:13px 21px;font-weight:750;font-size:.9rem;border:1px solid var(--line);transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#062b32;border-color:var(--accent)}.secondary{background:rgba(255,255,255,.05)}
+.tags{display:flex;gap:9px;flex-wrap:wrap;padding:0;list-style:none;margin-top:26px}.tags li{font-size:.76rem;border:1px solid var(--line);padding:8px 11px;border-radius:40px;color:#ccdeeb;background:rgba(255,255,255,.035)}
+.graphic{position:relative;min-height:530px;display:grid;place-items:center}.orbit{width:min(100%,510px);aspect-ratio:1;position:relative;border:1px solid rgba(71,223,207,.25);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(36,151,176,.2),transparent 60%);box-shadow:0 0 110px rgba(30,168,173,.08)}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed rgba(71,223,207,.25);border-radius:50%;inset:11%}.orbit:after{inset:25%;border-style:solid}
+.core{z-index:1;width:40%;aspect-ratio:1;border:1px solid rgba(71,223,207,.4);border-radius:26px;display:grid;place-items:center;transform:rotate(-8deg);background:linear-gradient(135deg,rgba(63,204,209,.2),rgba(3,28,49,.9));box-shadow:0 20px 80px rgba(0,0,0,.22)}.core svg{width:74%;height:74%;transform:rotate(8deg)}
+.pill{position:absolute;z-index:2;display:flex;gap:9px;align-items:center;backdrop-filter:blur(16px);background:rgba(10,31,51,.87);border:1px solid rgba(156,220,232,.27);border-radius:10px;padding:13px 16px;color:#dcebf5;font-size:.79rem;font-weight:680;box-shadow:0 18px 40px #0003}.pill svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.7}.p1{top:11%;left:0}.p2{top:24%;right:-2%}.p3{bottom:23%;left:-5%}.p4{bottom:11%;right:2%}
+.regulatory{width:min(1160px,calc(100% - 44px));margin:0 auto;padding:25px 0 43px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:23px 34px}.regulatory strong{color:#a8bdcb;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;margin-right:auto}.standard{font-size:.9rem;color:#d9e6ee;font-weight:800;letter-spacing:.04em}.standard small{display:block;font-size:.61rem;font-weight:500;letter-spacing:0;color:#8faab9}.note{width:min(1160px,calc(100% - 44px));margin:0 auto;padding:0 0 24px;color:#88a2b1;font-size:.67rem}
+@media(max-width:850px){main{grid-template-columns:1fr;padding:45px 0 70px;gap:0}.graphic{min-height:420px}.orbit{width:min(82vw,390px)}.p1{left:3%}.p2{right:0}.p3{left:0}.p4{right:4%}nav{gap:12px}h1{max-width:620px}}@media(max-width:470px){header{align-items:flex-start;flex-direction:column;gap:16px}nav a{font-size:.74rem}.graphic{min-height:340px}.orbit{width:75vw}.pill{font-size:.65rem;padding:9px}.pill svg{width:16px;height:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+</style>
+</head>
+<body>
+<section class="hero" id="home"><div class="halo" aria-hidden="true"></div>
+<header><a class="brand" href="#home">LIFE SCIENCES <span>/ ENGINEERING</span></a><nav aria-label="Main navigation"><a href="#focus">Focus areas</a><a href="https://chetanpatadiya.com/">Engineering portfolio</a><a href="https://github.com/chetanpatadiya">GitHub</a></nav></header>
+<main><div class="copy"><div class="eyebrow">Engineering • Research • Regulatory Science</div>
+<h1>Advancing science.<br><em>Engineering trust.</em></h1>
+<p class="intro">Exploring the intersection of pharmaceutical packaging, medical device development, and evidence-based regulatory engineering—through simulation, digital tools, and rigorous validation.</p>
+<div class="buttons"><a class="button primary" href="https://chetanpatadiya.com/">Explore engineering tools ↗</a><a class="button secondary" href="https://github.com/chetanpatadiya">View GitHub projects ↗</a></div>
+<ul class="tags" id="focus"><li>Sterile Barrier Systems</li><li>Packaging Validation</li><li>AI &amp; Simulation</li><li>Regulatory Science</li></ul></div>
+<div class="graphic" role="img" aria-label="Abstract biomedical engineering illustration with medical cross, molecular network, and pharmaceutical, medical-device, and regulatory labels">
+<div class="orbit"><div class="core"><svg viewBox="0 0 160 160" aria-hidden="true"><g stroke="#61e6db" stroke-width="3" fill="none"><path d="M80 11 139 45v70l-59 34-59-34V45z"/><path d="M80 11v35M21 45l30 18m88-18-30 18M21 115l30-18m88 18-30-18M80 149v-35" opacity=".5"/><circle cx="80" cy="80" r="44" opacity=".35"/></g><path d="M70 51h20v19h19v20H90v19H70V90H51V70h19z" fill="#59e4d7"/></svg></div></div>
+<div class="pill p1"><svg viewBox="0 0 24 24"><path d="M7 3v6m10-6v6M4 10h16M5 21h14V6H5z"/></svg>Pharmaceutical Sciences</div>
+<div class="pill p2"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 7v10M7 12h10"/></svg>Medical Devices</div>
+<div class="pill p3"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3 8 8 10 5-2 8-5 8-10V6zM8 12l3 3 5-6"/></svg>Regulatory &amp; Quality</div>
+<div class="pill p4"><svg viewBox="0 0 24 24"><path d="m4 17 5-5 4 3 7-9M15 6h5v5"/></svg>Digital Validation</div></div></main>
+<div class="regulatory" aria-label="Referenced regulatory frameworks and standards"><strong>Standards &amp; frameworks</strong>
+<div class="standard">FDA<small>U.S. Regulatory Framework</small></div><div class="standard">ISO 11607<small>Sterile Barrier Packaging</small></div><div class="standard">ISO 13485<small>Quality Management Systems</small></div><div class="standard">ASTM<small>Test Methods &amp; Standards</small></div><div class="standard">ICH<small>Pharmaceutical Guidelines</small></div></div>
+<p class="note">Standards and agency names are informational references, not official logos, endorsements, or certifications.</p></section>
+</body></html>
